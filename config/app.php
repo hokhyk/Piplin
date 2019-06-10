@@ -185,6 +185,7 @@ return [
         Fideloper\Proxy\TrustedProxyServiceProvider::class,
         SocialiteProviders\Manager\ServiceProvider::class,
 
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         /*
          * Application Service Providers...
          */

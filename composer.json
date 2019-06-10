@@ -50,7 +50,9 @@
         "codeclimate/php-test-reporter": "^0.3.0",
         "themsaid/laravel-langman": "^1.1",
         "diablomedia/phpunit-pretty-printer": "dev-master",
-        "friendsofphp/php-cs-fixer": "^2.0"
+        "friendsofphp/php-cs-fixer": "^2.0",
+        "barryvdh/laravel-debugbar": "^3.1",
+        "barryvdh/laravel-ide-helper": "^2.4"
     },
     "autoload": {
         "classmap": [
@@ -80,6 +82,8 @@
             "php artisan js-localization:refresh"
         ],
         "post-update-cmd": [
+            "@php artisan ide-helper:generate",
+            "@php artisan ide-helper:meta",
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
             "php artisan js-localization:refresh"
         ]
@@ -88,9 +92,5 @@
         "preferred-install": "dist"
     },
     "repositories": {
-        "packagist": {
-            "type": "composer",
-            "url": "https://packagist.phpcomposer.com"
-        }
     }
 }
