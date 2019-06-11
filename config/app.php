@@ -111,7 +111,7 @@ return [
     |
      */
 
-    'key' => env('APP_KEY', 'SomeRandomString'),
+    'key' => env('APP_KEY', 'base64:X9gcVB5Y4gzCsbuzVzQTLC8CgDvYgatcLu+N8wUXTIQ='),
 
     'cipher' => 'AES-256-CBC',
 
@@ -198,6 +198,7 @@ return [
         Piplin\Providers\UpdateServiceProvider::class,
         Piplin\Providers\ValidationServiceProvider::class,
         Piplin\Providers\WhoopsServiceProvider::class,
+        Dionera\BeanstalkdUI\BeanstalkdUIServiceProvider::class,
 
     ],
 
